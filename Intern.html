@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Stock Data</title>
+    <link rel="stylesheet" href="Intern.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+
+    <div id="index-list">
+        <h3>Companies</h3>
+        <div id="loading">Loading index data...</div>
+        <ul id="indexes"></ul>
+        <div id="pagination">
+            <button id="prev" onclick="loadPage(currentPage - 1)">Prev</button>
+            <button id="next" onclick="loadPage(currentPage + 1)">Next</button>
+        </div>
+    </div>
+
+    <div id="chart-container">
+        <canvas id="stock-chart"></canvas>
+    </div>
+
+    <script src="Intern.js"></script>
+
+</body>
+</html>
